@@ -1,0 +1,21 @@
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navbar li{
+    display: inline-block;
+    list-style: none;
+    
+    
+}
+.navbar a{
+    display: block;
+    font-weight: bold;
+    font-size: medium;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 15px;
+    
+}
