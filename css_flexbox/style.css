@@ -30,10 +30,10 @@
   .card {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 2rem;
-    width: 650px;
+    width: 750px;
     background-color: var(--White);
   }
-  .card-container {
+  .container {
     display: flex;
     justify-content: space-between;
   }
@@ -112,28 +112,28 @@
   .row:nth-child(1) {
     background-color: hsla(0, 100%, 67%, 0.2);
   }
-  .row:nth-child(1) .badge b {
+  .row:nth-child(1) .rank b {
     color: var(--Light-red);
   }
   .row:nth-child(2) {
     background-color: hsla(39, 100%, 56%, 0.2);
   }
-  .row:nth-child(2) .badge b {
+  .row:nth-child(2) .rank b {
     color: var(--Orangey-yellow);
   }
   .row:nth-child(3) {
     background-color: hsla(166, 100%, 37%, 0.2);
   }
-  .row:nth-child(3) .badge b {
+  .row:nth-child(3) .rank b {
     color: var(--Green-teal);
   }
   .row:nth-child(4) {
     background-color: hsla(234, 85%, 45%, 0.2);
   }
-  .row:nth-child(4) .badge b {
+  .row:nth-child(4) .rank b {
     color: var(--Cobalt-blue);
   }
-  .badge {
+  .rank {
     display: flex;
     align-items: center;
     gap: 0.5rem;
