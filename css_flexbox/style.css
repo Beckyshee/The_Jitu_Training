@@ -161,3 +161,26 @@
       var(--Light-slate-blue-background),
       var(--Light-royal-blue-background));
     }
+
+    @media screen and (max-width: 650px) {
+      body {
+        align-items: flex-start;
+        background-color: white;
+      }
+      .card {
+        box-shadow: none;
+      }
+      .container {
+        flex-direction: column;
+      }
+      .result {
+        border-radius: 0 0 1rem 1rem;
+        width: 100%;
+      }
+      .result .info {
+        width: 250px;
+      }
+      .summary {
+        width: 100%;
+      }
+    }
