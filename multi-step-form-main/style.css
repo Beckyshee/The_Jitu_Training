@@ -11,18 +11,18 @@
   --Alabaster: hsl(231, 100%, 99%);
   --White: hsl(0, 0%, 100%);
 }
+
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
   padding: 0;
   margin: 0;
 }
-.hidden {
-  display: none;
-}
+
 img {
   max-width: 100%;
 }
+
 body {
   background-color: var(--Magnolia);
   display: flex;
@@ -30,17 +30,18 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
 .form {
   width: 900px;
   background-color: var(--White);
   border-radius: 1rem;
   box-shadow: 0px 0px 1px black;
 }
-.form-container {
+.container {
   display: flex;
   padding: 1rem;
 }
-.form-sidebar {
+.sidebar {
   background-image: url("./assets/images/bg-sidebar-desktop.svg");
   background-repeat: no-repeat;
   width: 400px;
@@ -166,7 +167,7 @@ form .error {
   body {
     position: relative;
   }
-  .form-sidebar {
+  .sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -189,7 +190,7 @@ form .error {
     max-width: 375px;
     background-color: white;
   }
-  .form-container {
+  .container {
     padding: 2rem;
   }
   .btns {
