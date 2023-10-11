@@ -30,6 +30,20 @@ console.log(!isMale);*/
 let last_name = "baraka";
 console.log(middle_name ?? last_name ?? "kellah");*/
 
+let names = ["john", "doe", "jane", "kamau"]
+// names.unshift("becky")
+// names.shift("becky")
+// names.splice(1, 2)
+// names.splice(1, 2, "jenna", "robin")
+// names.fill("daniel")
+// names.reverse()
+// names.sort()
+
+//console.log(names);
+console.log(names.slice(1, 3));
+
+
+
 
 
 
