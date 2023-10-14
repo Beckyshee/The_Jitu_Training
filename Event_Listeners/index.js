@@ -1,40 +1,52 @@
-document.querySelector('#push').onclick = function(){
-  if(document.querySelector('#newtask input').value.length == 0){
-      alert("Please Enter a Task")
+const tasksArray = [];
+
+document.querySelector('#push').onclick = function() {
+  const taskInput = document.querySelector('#newtask input');
+  const taskName = taskInput.value;
+
+  if (taskName.length === 0) {
+    alert("Please Enter a Task");
+  } else {
+    // Add todo using the push method
+    tasksArray.push(taskName);
+    renderTasks();
+
+    // Clear the task input
+    taskInput.value = "";
   }
-  else{
-      document.querySelector('#tasks').innerHTML += `
-          <div class="task">
-              <span id="taskname">
-                  ${document.querySelector('#newtask input').value}
-              </span>
-              <button class="delete">
-                  <i class="far fa-trash-alt"></i>
-              </button>
-          </div>
-      `;
+};
 
-      var current_tasks = document.querySelectorAll(".delete");
-      for(var i=0; i<current_tasks.length; i++){
-          current_tasks[i].onclick = function(){
-              this.parentNode.remove();
-          }
-      }
+function renderTasks() {
+  const tasksContainer = document.querySelector('#tasks');
+  tasksContainer.innerHTML = "";
 
-      var tasks = document.querySelectorAll(".task");
-      for(var i=0; i<tasks.length; i++){
-          tasks[i].onclick = function(){
-              this.classList.toggle('completed');
-          }
-      }
+  tasksArray.forEach((task, index) => {
+    const taskElement = document.createElement("div");
+    taskElement.classList.add("task");
 
+    const taskNameElement = document.createElement("span");
+    taskNameElement.id = "taskname";
+    taskNameElement.textContent = task;
 
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete");
+    deleteButton.innerHTML = '<i class="far fa-trash-alt"></i>';
 
-      var tasks = document.querySelectorAll(".task");
-      
+    deleteButton.onclick = function() {
+      tasksArray.splice(index, 1);
+      renderTasks();
+    };
 
+    taskElement.appendChild(taskNameElement);
+    taskElement.appendChild(deleteButton);
+    tasksContainer.appendChild(taskElement);
+  });
 
-      document.querySelector("#newtask input").value = "";
-  }
-  
+  const tasks = document.querySelectorAll(".task");
+  tasks.forEach((task) => {
+    task.onclick = function() {
+      this.classList.toggle('completed');
+    };
+  });
 }
+
