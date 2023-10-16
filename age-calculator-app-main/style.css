@@ -1,0 +1,103 @@
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: pop;
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background-color: var(--Off-white);
+    /*font-family: pop;*/
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: var(--White);
+    max-width: 80%;
+    padding: 30px;
+   /* position: relative;*/
+    width: 450px;
+    min-height: 50vh;
+    border-bottom-right-radius: 100px;
+    
+}
+
+input{
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+    border: 2px solid var(--Off-white);
+}
+
+input:focus{
+    border: 2px solid var(--Purple);
+}
+
+
+small{
+    color: red;
+    text-transform: capitalize;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.btn{
+    display: flex;
+    background-color: var(--Purple);
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    right: 30px;
+    top: 60px;
+}
+.inside{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.input-container{
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--Off-white);
+    margin-bottom: 20px;
+}
+
+.my-output span{
+    font-size: 11px;
+    color: var(--Purple);
+    font-style: italic;
+    font-size: larger;
+    
+}
+
+
+
+
+
+
