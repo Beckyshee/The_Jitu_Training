@@ -1,17 +1,14 @@
 const tasksArray = [];
 
 document.querySelector('#push').onclick = function() {
-  const taskInput = document.querySelector('#newtask input');
+  const taskInput = document.querySelector('#taskInput');
   const taskName = taskInput.value;
 
   if (taskName.length === 0) {
     alert("Please Enter a Task");
   } else {
-    // Adding todo's using the push method
     tasksArray.push(taskName);
     renderTasks();
-
-    // Clear the task input
     taskInput.value = "";
   }
 };
@@ -30,15 +27,28 @@ function renderTasks() {
 
     const deleteButton = document.createElement("button");
     deleteButton.classList.add("delete");
-    deleteButton.innerHTML = '<i class="far fa-trash-alt"></i>';
+    deleteButton.textContent = "Delete";
+
+    const editButton = document.createElement("button");
+    editButton.classList.add("edit");
+    editButton.textContent = "Edit";
 
     deleteButton.onclick = function() {
       tasksArray.splice(index, 1);
       renderTasks();
     };
 
+    editButton.onclick = function() {
+      const newTaskName = prompt("Edit the task:", task);
+      if (newTaskName !== null) {
+        tasksArray[index] = newTaskName;
+        renderTasks();
+      }
+    };
+
     taskElement.appendChild(taskNameElement);
     taskElement.appendChild(deleteButton);
+    taskElement.appendChild(editButton);
     tasksContainer.appendChild(taskElement);
   });
 
@@ -50,3 +60,5 @@ function renderTasks() {
   });
 }
 
+// Initial rendering
+renderTasks();
