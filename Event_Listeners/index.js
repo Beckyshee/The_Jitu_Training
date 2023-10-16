@@ -7,7 +7,7 @@ document.querySelector('#push').onclick = function() {
   if (taskName.length === 0) {
     alert("Please Enter a Task");
   } else {
-    // Add todo using the push method
+    // Adding todo's using the push method
     tasksArray.push(taskName);
     renderTasks();
 
